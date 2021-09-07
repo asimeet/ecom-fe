@@ -4,7 +4,9 @@ module.exports = {
         name: "ECOM_FE_PROD",
         script: "npm",
         args : "run start-prod",
-        env: { PORT: 3000 }
+        instances: 2,
+        exec_mode: "cluster",
+        env: { PORT: 3008 }
       }
     ]
 };

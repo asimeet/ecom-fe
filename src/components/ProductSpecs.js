@@ -2,6 +2,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import Grid from '@material-ui/core/Grid';
 import config  from "../config";
+import triggerNotImplemented from "../commons/notImpletedTrigger";
 
 const ProductSpecs = () => {
 
@@ -46,7 +47,8 @@ const ProductSpecs = () => {
         <div className="product-spec-container">
             <div style={{marginTop:'10px', fontSize: '14px'}}>
                 Originals 
-                <span style={{float:'right'}}>
+                <span style={{float:'right'}}
+                    onClick={triggerNotImplemented}>
                     <b>✭✭✭✭✭ </b><b style={{textDecoration:'underline'}}>639</b>
                 </span>                             
             </div>
@@ -60,6 +62,15 @@ const ProductSpecs = () => {
                 <b>{data.basePrice}</b>
             </div>
             <div style={{marginTop:'20px', fontSize: '14px'}}>
+                <b>Select color</b>
+            </div>
+            <div style={{marginTop:'20px', fontSize: '14px'}}>
+                <select id='color' style={{padding:'10px'}}>
+                    { data.colors.map( item => <option>{item}</option>)}
+                </select>
+            </div>
+
+            <div style={{marginTop:'20px', fontSize: '14px'}}>
                 <b>Select size</b>
             </div>
             <table style={{marginTop:'20px', fontSize: '14px', width:'100%'}}>
@@ -67,12 +78,14 @@ const ProductSpecs = () => {
                 <tbody>{sizeTable}</tbody>
             </table>
             <Grid container={true} style={{marginTop:'30px'}}>
-                <Grid className="add-to-bag" item xs={9} sm={9} md={9} lg={9} xl={9}>
+                <Grid className="add-to-bag" item xs={9} sm={9} md={9} lg={9} xl={9}
+                      onClick={triggerNotImplemented}>
                     <b>ADD TO BAG</b>
                     <span style={{float: 'right'}}>→</span>
                 </Grid>
                 <Grid item xs={1} sm={1} md={1} lg={1} xl={1}></Grid>
-                <Grid className="add-to-fav" item xs={2} sm={2} md={2} lg={2} xl={2}>
+                <Grid className="add-to-fav" item xs={2} sm={2} md={2} lg={2} xl={2}
+                    onClick={triggerNotImplemented}>
                     ♡
                 </Grid>
             </Grid>   
