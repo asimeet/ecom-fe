@@ -6,7 +6,7 @@ module.exports = {
         args : "run start-prod",
         instances: 2,
         exec_mode: "cluster",
-        env: { PORT: 3008 }
+        env: { PORT: 3000 }
       }
     ]
 };
