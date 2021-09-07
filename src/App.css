@@ -1,0 +1,115 @@
+@import "~react-image-gallery/styles/css/image-gallery.css";
+
+body {
+  font-family: "Tahoma", "Trebuchet MS", Helvetica, Arial, sans-serif;
+}
+
+.slider-container {
+  background: white;
+  filter: brightness(0.9);
+  padding: 2%;
+}
+
+.product-description-container {
+  padding-top: 3%;
+  padding-bottom: 3%;
+  padding-left: 10%;
+  padding-right: 20%;
+  font-size: 40px;
+}
+
+.product-spec-container {
+  padding-top: 3%;
+  padding-bottom: 3%;
+  padding-left: 5%;
+  padding-right: 5%;
+  font-size: 40px;
+}
+
+.size-cells {
+  padding: 10px;
+  border: 1px solid;
+  border-color: gainsboro;
+}
+
+.size-cells:hover {
+  background-color: gainsboro;
+}
+
+.size-cells:active {
+  background-color: black;
+  color: white;
+}
+
+.slider-header {
+  font-size: 14px;
+  padding-top: 1%;
+  margin-bottom: -4%;
+  display: flex;
+  z-index: 4;
+  background: transparent;
+}
+
+.image-gallery-slide .image-gallery-image {
+  width: 45%;
+  object-fit: contain;
+}
+
+.image-gallery-thumbnail {
+  width: 42px;
+  height: 0px;
+  border: 0.001px solid black;
+  background-color: black;
+}
+
+.image-gallery-thumbnail.active {
+  border: 3px black solid;
+}
+
+.image-gallery-thumbnails-container {
+  height: 40px;
+}
+
+.image-gallery-thumbnail-image {
+  width: 32px;
+  height: 0px;
+}
+
+.image-gallery-thumbnails-wrapper:hover {
+  height: 100%;
+}
+
+.image-gallery-thumbnails-wrapper:hover .image-gallery-thumbnail-image {
+  height: 100%;
+  border: 1px solid black;
+}
+
+.image-gallery-content .image-gallery-slide .image-gallery-image {
+  filter: brightness(1.07);
+}
+
+.image-gallery-thumbnail .image-gallery-thumbnail-inner {
+  display: flex;
+}
+
+.image-gallery-add-class {
+  margin-top: 2%;
+}
+
+.image-gallery-thumbnails-container button {
+  margin-right: 15px;
+}
+
+.add-to-bag {
+  background: black;
+  color: white;
+  padding: 20px;
+  font-size: 14px;
+}
+
+.add-to-fav { 
+  padding: 10px; 
+  font-size: 16px; 
+  border: 2px solid black;
+  text-align: center;
+}
