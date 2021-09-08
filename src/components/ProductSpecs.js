@@ -94,8 +94,8 @@ const ProductSpecs = () => {
         let sizeTable = [];
         let rowCells = [];
         for(let i = 0; i < sizes.length; i++) {
-            if( (i >0 && i%6 === 0)){
-                sizeTable.push(<tr key={'row-'+(i/6)}>{rowCells}</tr>);
+            if( (i >0 && i%5 === 0)){
+                sizeTable.push(<tr key={'row-'+(i/5)}>{rowCells}</tr>);
                 rowCells = [];
             } 
             rowCells.push(
@@ -106,7 +106,7 @@ const ProductSpecs = () => {
                 </td>
             );
             if(i === sizes.length - 1){
-                sizeTable.push(<tr key={'row-'+(i/6)}>{rowCells}</tr>);
+                sizeTable.push(<tr key={'row-'+(i/5)}>{rowCells}</tr>);
             }
         }
         return <table width={'100%'}>
