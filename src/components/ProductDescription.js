@@ -22,16 +22,16 @@ const ProductDescription = () => {
 
     return(
         <div className="product-description-container">
-            <div style={{fontSize: '36px'}}>
+            <div style={{fontSize: '30px'}}>
                 <b>{info.title}</b>
             </div>
-            <div style={{marginTop: '10px', fontSize: '30px', fontStyle:'italic'}}>
+            <div style={{marginTop: '10px', fontSize: '20px', fontStyle:'italic'}}>
                 {info.header}
             </div>
-            <div style={{marginTop: '20px', fontSize: '16px'}}>
+            <div style={{marginTop: '15px', fontSize: '14px'}}>
                 {info.description}
             </div>
-            <div style={{marginTop: '30px', fontSize: '14px'}}>
+            <div style={{marginTop: '20px', fontSize: '12px'}}>
                 {info.recyleInfo}
             </div>
         </div>

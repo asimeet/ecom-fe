@@ -13,32 +13,37 @@ body {
 }
 
 .product-description-container {
-  padding-top: 3%;
-  padding-bottom: 3%;
+  padding-top: 2%;
+  padding-bottom: 2%;
   padding-left: 10%;
-  padding-right: 20%;
-  font-size: 40px;
+  padding-right: 15%;
 }
 
 .product-spec-container {
   padding-top: 3%;
-  padding-bottom: 3%;
   padding-left: 5%;
   padding-right: 5%;
-  font-size: 40px;
 }
 
 .size-cells {
-  padding: 10px;
+  padding: 5px;
   border: 1px solid;
   border-color: gainsboro;
+  text-align: center;
+  cursor: pointer;
 }
 
 .size-cells:hover {
-  background-color: gainsboro;
+  background-color: black;
+  color: white;
 }
 
 .size-cells:active {
+  background-color: black;
+  color: white;
+}
+
+.selected-cell {
   background-color: black;
   color: white;
 }
@@ -106,13 +111,13 @@ body {
 .add-to-bag {
   background: black;
   color: white;
-  padding: 20px;
-  font-size: 14px;
+  padding: 15px;
+  font-size: 12px;
 }
 
 .add-to-fav { 
   padding: 10px; 
-  font-size: 16px; 
+  font-size: 14px; 
   border: 2px solid black;
   text-align: center;
 }

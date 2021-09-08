@@ -13,9 +13,9 @@ const ProductSlider = (props) => {
 
     const fetchData = async () => {
         const { data } = await axios.get(
-          `${config.PDP_BASEURL}/get-product-images/1234?API_KEY=${config.PDP_API_KEY}`
+          `${config.PDP_BASEURL}/get-product-image-urls/1234?API_KEY=${config.PDP_API_KEY}`
         );
-        setImages(data.imageUrls);
+        setImages(data.productImageUrls);
     };
 
     useEffect(() => fetchData(), []);
