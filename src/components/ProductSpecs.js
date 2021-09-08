@@ -36,16 +36,34 @@ const ProductSpecs = () => {
         }
         event.target.classList.add('selected-cell');
         setSelectedCell(event.target);
-        const newItem = data.items.find( item => item.size === size && item.color === selectedItem.color);
+        let newItem = data.items.find( item => item.size === size && item.color === selectedItem.color);
+        if(!newItem){
+            //add dummy item out of stock
+            newItem = {
+                stock: 0,
+                itemId: 'dummy-item',
+                size,
+                color: selectedItem.color
+            }
+        }
         setSelectedItem(newItem);
     }
 
     const colorSelected = (color) => {
-        const newItem = data.items.find( item => item.color === color && item.size === selectedItem.size);
+        let newItem = data.items.find( item => item.color === color && item.size === selectedItem.size);
+        if(!newItem){
+            //add dummy item out of stock
+            newItem = {
+                stock: 0,
+                itemId: 'dummy-item',
+                size: selectedItem.color,
+                color
+            }
+        }
         setSelectedItem(newItem);
     }
 
-    const sizes = lodash.uniq(data.items.map( item => item.size ));
+    const sizes = lodash.uniq(data.items.map( item => item.size )).sort((a,b) => a < b ? -1: 1);
     const colors = lodash.uniq(data.items.map( item => item.color));
 
     const selectColor =  <select 
@@ -76,24 +94,20 @@ const ProductSpecs = () => {
         let sizeTable = [];
         let rowCells = [];
         for(let i = 0; i < sizes.length; i++) {
-            if( i >0 && i%6 === 0){
+            if( (i >0 && i%6 === 0)){
                 sizeTable.push(<tr key={'row-'+(i/6)}>{rowCells}</tr>);
                 rowCells = [];
-            }
-            let cellContent = sizes[i];    
-            if(cellContent.includes('/')){
-                const denominator = cellContent.split('/')[1];
-                const numerator = cellContent.split('/')[0].split(' ')[1];
-                const integer = cellContent.split('/')[0].split(' ')[0];
-                cellContent = <span>{integer}<sup>{numerator}</sup>&frasl;<sub>{denominator}</sub></span>
-            }
+            } 
             rowCells.push(
                 <td key={i} 
                     className={ i === 0 ? 'size-cells selected-cell': 'size-cells' } 
-                    onClick={(event) => sizeSelected(sizes[i],event)}>
-                        {cellContent}
+                    onClick={(event) => sizeSelected(sizes[i], event)}>
+                        {sizes[i]}
                 </td>
             );
+            if(i === sizes.length - 1){
+                sizeTable.push(<tr key={'row-'+(i/6)}>{rowCells}</tr>);
+            }
         }
         return <table width={'100%'}>
                     <thead></thead>
