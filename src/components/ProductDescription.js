@@ -22,7 +22,7 @@ const ProductDescription = () => {
 
     return(
         <div className="product-description-container">
-            <div style={{fontSize: '30px'}}>
+            <div style={{fontSize: '25px'}}>
                 <b>{info.title}</b>
             </div>
             <div style={{marginTop: '10px', fontSize: '20px', fontStyle:'italic'}}>
