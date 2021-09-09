@@ -59,8 +59,8 @@ Internally it has 5 main components as described below:
   * This is the most enriched component and has the following functionalities:
     - Calculate Avarage rating from the backend data and display in form of stars
     - Select the correct item or variant of a product based on user selection of color and size
-    - Display 'Out of Stock' is selected item stock is 0
-    - Display Price of the item is stock is greater than 0
+    - Display 'Out of Stock' if the selected item stock is 0
+    - Display Price of the item it's stock is greater than 0
 * ProductDescription.js 
   - This component shows the information of the product from the data recived from backend.
 * ProductDescriptionLayout.js 
