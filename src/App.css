@@ -55,7 +55,8 @@ body {
   z-index: 4;
   background: transparent;
   position: absolute;
-  top: 4%;  
+  top: 4%;
+  cursor: pointer; 
 }
 
 .image-gallery-slide .image-gallery-image {

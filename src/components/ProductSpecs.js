@@ -84,7 +84,7 @@ const ProductSpecs = () => {
         for (let i = 0; i < avgRating; i++) {
             ratingStar += '✭'
         }
-        return <div>
+        return <div style={{cursor: 'pointer'}}>
                     <b>{ratingStar} </b>
                     <b style={{textDecoration:'underline'}}>{data.ratings.length}</b>
                 </div>
@@ -118,6 +118,7 @@ const ProductSpecs = () => {
     const getSizeGuidanceAndOutOfOrder = () => {
         return  <Grid container={true}>
                     <Grid item xs={5} sm={5} md={5} lg={5} xl={5}
+                        style={{cursor: 'pointer'}}
                         onClick={triggerNotImplemented}>
                         <div>
                             <span style={{fontSize:'18px',verticalAlign: 'top'}}>&#5770; </span>
@@ -126,6 +127,7 @@ const ProductSpecs = () => {
                     </Grid>
                     <Grid item xs={2} sm={2} md={2} lg={2} xl={2}></Grid>
                     <Grid item xs={5} sm={5} md={5} lg={5} xl={5}
+                        style={{cursor: 'pointer'}}
                         onClick={triggerNotImplemented}>
                         <div style={{float: 'right', marginTop:'-10px'}}>
                             <span style={{fontSize:'25px',verticalAlign: 'sub'}}>&#9993; </span>
