@@ -122,11 +122,11 @@ This is an example of how to list things you need to use the software and how to
 ## Usage
 
 ### Development Environment
-1. On the ecom-fe folder level use following to start frontend
+1. On the ecom-fe folder level use the following command to start frontend
    ```sh
    npm start
    ```
-2. On the ecom-be folder level use following to start backend
+2. On the ecom-be folder level use the following command to start backend
    ```sh
    npm run start-all-dev
    ```
@@ -138,7 +138,7 @@ This is an example of how to list things you need to use the software and how to
     export REACT_APP_PDP_API_KEY={EXTERNAL_API_KEY set in production environment for backend}
     export REACT_APP_PDP_BASEURL={your production url for product-description-page microservice}
   ```
-2. On the ecom-fe folder level use following to start frontend
+2. On the ecom-fe folder level use the following command to start frontend
   ```sh
     npm run start-prod
   ```
@@ -146,11 +146,11 @@ This is an example of how to list things you need to use the software and how to
   ```sh
     npm install pm2 -g
   ```
-4. On the ecom-be folder level use following to start backend
+4. On the ecom-be folder level use the following command to start backend
   ```sh
     INTERNAL_API_KEY={secret internal api key} EXTERNAL_API_KEY={public api key for pdp microservice}  pm2 start pm2.config.js --env=production --update-env
   ```
-5. Application will be ready for use in production instance
+5. Application will be ready for use in production server
 
 <!-- CONTACT -->
 ## Contact
