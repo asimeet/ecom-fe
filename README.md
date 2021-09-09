@@ -1,4 +1,3 @@
-<br />
 <p align="center">
   <h3 align="center">The Ecommerce App - Frontend</h3>
 
