@@ -5,7 +5,7 @@
      This is the frontend implemented with react for a backend implemented with express microservices!
     <br />
     <br />
-    <a href="https://github.com/othneildrew/Best-README-Template">View Demo</a>
+    <a href="">View Demo</a>
     ·
     <a href="https://gitlab.com/asimeetp/ecom-fe/-/issues">Report Bug</a>
     ·
@@ -53,35 +53,39 @@ This is a single page user interface that shows the product description page of 
 
 Internally it has 5 main components as described below:
 
-* ProductSlider.js - contains the photo gallery of the shoe. The image urls
-are fetched from the product-description-page microservice.
-* ProductSpecs.js -  the most enriched component situated at the right of the page 
-that shows ratings, available colors it also has logic to show 'Out of Stock' or the price
-based on data recieved from the product-description-page microservice.
-* ProductDescription.js - shows the information of the product from the data recived from
-product-description-page microservice.
-* ProductDescriptionLayout.js - just a placeholding component implemented with grid system.
-* ToastComponent.ts - as this is demo application, it is important to show that some features are not implemented when certain UI elements are clicked.
+* ProductSlider.js 
+  - This component has the logic to render product photos in gallery mode. The image urls are fetched from the backend
+* ProductSpecs.js 
+  * This is the most enriched component and has the following functionalities:
+    - Calculate Avarage rating from the backend data and display in form of stars
+    - Select the correct item or variant of a product based on user selection of color and size
+    - Display 'Out of Stock' is selected item stock is 0
+    - Display Price of the item is stock is greater than 0
+* ProductDescription.js 
+  - This component shows the information of the product from the data recived from backend.
+* ProductDescriptionLayout.js 
+  - This component forms the view of the page and places involved child components in grid alignment.
+* ToastComponent.ts 
+  - As this is demo application, it is important to show that some features are not implemented when certain UI elements are clicked and this component takes care of it.
 
 ### Built With
 
 The following npm libraries have been used in the application:
 
 * [react-helmet](https://www.npmjs.com/package/react-helmet)
-  Used for adding and updating metadata tags for SEO.
+  - Used for adding and updating metadata tags for Search Engine Optimization(SEO).
 * [react-image-gallery](https://www.npmjs.com/package/react-image-gallery)
-  Used for slide show gallery of product images
+  - Used for presenting multiple product image in gallery mode
 * [react-router-dom](https://www.npmjs.com/package/react-router-dom)
-  Used to route to different components internally, not really needed at this point in time.
-  However it is needed to extend this application to have different views.
+  - Used for extending application to have multiple views and routing in future.
 * [@material-ui/core](https://www.npmjs.com/package/@material-ui/core)
-  Used to achieve grid system and alignments
+  - Used for aligning and placing components and html element in grid.
 * [react-toastify](https://www.npmjs.com/package/react-toastify)
-  Used to show toast messages. specifically for 'Not Implemented yet..' toast message in the application.
+  - Used for showing toast messages. specifically for 'Not Implemented yet..' toast message in the application.
 * [axios](https://www.npmjs.com/package/axios)
-  Used to make http requests to product-description-page microservice.
+  - Used for making http requests to product-description-page microservice.
 * [lodash](https://www.npmjs.com/package/lodash)
-  Used for common js funtions like sorting, getting uniqvalues and getting start-case text.
+  - Used for common js funtions like sorting, getting uniqe values and getting start-case text.
 
 
 <!-- GETTING STARTED -->
