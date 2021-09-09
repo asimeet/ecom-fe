@@ -4,13 +4,15 @@ import Grid from '@material-ui/core/Grid';
 import config  from "../config";
 import triggerNotImplemented from "../commons/notImpletedTrigger";
 import lodash from 'lodash';
+import { Helmet } from "react-helmet";
 
 const ProductSpecs = () => {
     
     const [data, setData] = useState({ 
         info: { title: 'loading..'},
         items: [],
-        ratings: []
+        ratings: [],
+        metadata: {}
     });
 
     const [selectedItem, setSelectedItem] = useState({});
@@ -152,43 +154,66 @@ const ProductSpecs = () => {
                 </Grid> 
     }
 
+    const getMetadata = () => {
+        if (!data || !data.metadata) {
+            return '';
+        }
+        const helmetInsides = [];
+        if(data.metadata.title){
+            helmetInsides.push(<title>{data.metadata.title}</title>)
+        }
+        Object.keys(data.metadata).forEach( key => {
+            if(data.metadata[key]) {
+                helmetInsides.push(
+                    <meta name={lodash.kebabCase(key)} content={data.metadata[key]}></meta>
+                );
+            }
+        });
+        return  <Helmet>
+                    {helmetInsides}
+                </Helmet>
+    }
+
     return(
-        <div className="product-spec-container">
-            <div style={{marginTop:'10px', fontSize: '12px'}}>
-                Volleyball 
-                <span style={{float:'right'}}
-                    onClick={triggerNotImplemented}>
-                    {getRating()}
-                </span>                             
+        <div>
+            {getMetadata()}
+            <div className="product-spec-container">
+                <div style={{marginTop:'10px', fontSize: '12px'}}>
+                    Volleyball 
+                    <span style={{float:'right'}}
+                        onClick={triggerNotImplemented}>
+                        {getRating()}
+                    </span>                             
+                </div>
+                <div style={{marginTop:'15px', fontSize: '35px', fontStyle: 'italic'}}>
+                    {data.info.title}
+                </div>   
+                <div style={{marginTop:'5px', fontSize: '14px'}}>
+                    { colors.map( color => lodash.startCase(color)).join(' / ') }
+                </div> 
+                <div style={{marginTop:'20px', fontSize: '18px'}}>
+                    <b>{selectedItem.stock === 0? 'Out Of Stock' : '€ ' + selectedItem.price}</b>
+                </div>
+                <div style={{marginTop:'15px', fontSize: '14px'}}>
+                    <b>Select color</b>
+                </div>
+                <div style={{marginTop:'15px', fontSize: '14px'}}>
+                    {selectColor}
+                </div>
+                <div style={{marginTop:'15px', fontSize: '14px'}}>
+                    <b>Select size</b>
+                </div>
+                <div style={{marginTop:'15px', fontSize: '12px'}}>
+                    {getSizeTable()}
+                </div>
+                <div style={{marginTop:'15px', fontSize: '12px'}}>
+                    {getSizeGuidanceAndOutOfOrder()}
+                </div>
+                <div style={{marginTop:'20px'}}>
+                    {getAddToBagAndFavorite()}
+                </div>
             </div>
-            <div style={{marginTop:'15px', fontSize: '35px', fontStyle: 'italic'}}>
-                {data.info.title}
-            </div>   
-            <div style={{marginTop:'5px', fontSize: '14px'}}>
-                { colors.map( color => lodash.startCase(color)).join(' / ') }
-            </div> 
-            <div style={{marginTop:'20px', fontSize: '18px'}}>
-                <b>{selectedItem.stock === 0? 'Out Of Stock' : '€ ' + selectedItem.price}</b>
-            </div>
-            <div style={{marginTop:'15px', fontSize: '14px'}}>
-                <b>Select color</b>
-            </div>
-            <div style={{marginTop:'15px', fontSize: '14px'}}>
-                {selectColor}
-            </div>
-            <div style={{marginTop:'15px', fontSize: '14px'}}>
-                <b>Select size</b>
-            </div>
-            <div style={{marginTop:'15px', fontSize: '12px'}}>
-                {getSizeTable()}
-            </div>
-            <div style={{marginTop:'15px', fontSize: '12px'}}>
-                {getSizeGuidanceAndOutOfOrder()}
-            </div>
-            <div style={{marginTop:'20px'}}>
-                {getAddToBagAndFavorite()}
-            </div>
-        </div>
+        </div>  
     )
 }
 
