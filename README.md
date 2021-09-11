@@ -48,8 +48,6 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-![Alt Text](https://gitlab.com/asimeetp/ecom-fe/-/raw/main/ecom-gif.gif)
-
 This is a demo frontend application implemented with React. 
 This is a single page user interface that shows the product description page of a shoe.
 
@@ -69,6 +67,9 @@ Internally it has 5 main components as described below:
   - This component forms the view of the page and places involved child components in grid alignment.
 * ToastComponent.ts 
   - As this is demo application, it is important to show that some features are not implemented when certain UI elements are clicked and this component takes care of it.
+
+* 
+  - ![Alt Text](https://gitlab.com/asimeetp/ecom-fe/-/raw/main/ecom-gif.gif)
 
 ### Built With
 
