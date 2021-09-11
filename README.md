@@ -99,10 +99,7 @@ To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
 
-The following should be installed in the system in order to run the application:
-
-* [node js](https://nodejs.org/en/download/)
-
+* [Node.js](https://nodejs.org/en/download/) should be installed in the system in order to run the application.
 
 ### Installation
 
