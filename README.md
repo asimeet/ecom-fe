@@ -68,7 +68,8 @@ Internally it has 5 main components as described below:
 * ToastComponent.ts 
   - As this is demo application, it is important to show that some features are not implemented when certain UI elements are clicked and this component takes care of it.
 
-![](https://gitlab.com/asimeetp/ecom-fe/-/raw/main/ecom-gif.gif)
+|![](https://gitlab.com/asimeetp/ecom-fe/-/raw/main/ecom-gif.gif)|
+-
 
 ### Built With
 
