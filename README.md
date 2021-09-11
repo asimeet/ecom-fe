@@ -48,7 +48,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-![Alt Text](https://media.giphy.com/media/vFKqnCdLPNOKc/giphy.gif)
+![Alt Text](https://gitlab.com/asimeetp/ecom-fe/-/blob/main/ecom-gif.gif)
 
 This is a demo frontend application implemented with React. 
 This is a single page user interface that shows the product description page of a shoe.
