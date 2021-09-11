@@ -4,15 +4,13 @@ import Grid from '@material-ui/core/Grid';
 import config  from "../config";
 import triggerNotImplemented from "../commons/notImpletedTrigger";
 import lodash from 'lodash';
-import { Helmet } from "react-helmet";
 
 const ProductSpecs = () => {
     
     const [data, setData] = useState({ 
         info: { title: 'loading..'},
         items: [],
-        ratings: [],
-        metadata: {}
+        ratings: []
     });
 
     const [selectedItem, setSelectedItem] = useState({});
@@ -154,29 +152,8 @@ const ProductSpecs = () => {
                 </Grid> 
     }
 
-    const getMetadata = () => {
-        if (!data || !data.metadata) {
-            return '';
-        }
-        const helmetInsides = [];
-        if(data.metadata.title){
-            helmetInsides.push(<title>{data.metadata.title}</title>)
-        }
-        Object.keys(data.metadata).forEach( key => {
-            if(data.metadata[key]) {
-                helmetInsides.push(
-                    <meta name={lodash.kebabCase(key)} content={data.metadata[key]}></meta>
-                );
-            }
-        });
-        return  <Helmet>
-                    {helmetInsides}
-                </Helmet>
-    }
-
     return(
         <div>
-            {getMetadata()}
             <div className="product-spec-container">
                 <div style={{marginTop:'10px', fontSize: '12px'}}>
                     Volleyball 

@@ -1,8 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import config  from "../config";
-import Helmet from "react-helmet";
-import lodash from "lodash";
 
 const ProductDescription = () => {
 
@@ -12,8 +10,7 @@ const ProductDescription = () => {
             header: 'loading...',
             description: 'loading...',
             recyleInfo: 'loading..'
-        },
-        metadata: {}
+        }
     });
 
     const fetchData = async () => {
@@ -25,29 +22,8 @@ const ProductDescription = () => {
 
     useEffect(() => fetchData(), []);
 
-    const getMetadata = () => {
-        if (!data || !data.metadata) {
-            return '';
-        }
-        const helmetInsides = [];
-        if(data.metadata.title){
-            helmetInsides.push(<title>{data.metadata.title}</title>)
-        }
-        Object.keys(data.metadata).forEach( key => {
-            if(data.metadata[key]) {
-                helmetInsides.push(
-                    <meta name={lodash.kebabCase(key)} content={data.metadata[key]}></meta>
-                );
-            }
-        });
-        return  <Helmet>
-                    {helmetInsides}
-                </Helmet>
-    }
-
     return(
         <div>
-            {getMetadata()}
             <div className="product-description-container">
                 <div style={{fontSize: '25px'}}>
                     <b>{data.info.title}</b>

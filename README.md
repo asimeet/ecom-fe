@@ -48,6 +48,8 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
+![Alt Text](https://media.giphy.com/media/vFKqnCdLPNOKc/giphy.gif)
+
 This is a demo frontend application implemented with React. 
 This is a single page user interface that shows the product description page of a shoe.
 
