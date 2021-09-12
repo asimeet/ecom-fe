@@ -1,17 +1,17 @@
-<p align="center">
+<div align="center">
   <h3 align="center">The Ecommerce App - Frontend</h3>
 
-  <p align="center">
+  <div align="center">
      This is the frontend implemented with react for a backend implemented with express microservices!
     <br />
     <br />
-    <a href="">View Demo</a>
+    <a href=""><b>Open Application</b></a>
     ·
     <a href="https://gitlab.com/asimeetp/ecom-fe/-/issues">Report Bug</a>
     ·
     <a href="https://gitlab.com/asimeetp/ecom-fe/-/issues">Request Feature</a>
-  </p>
-</p>
+  </div>
+</div>
 
 
 
