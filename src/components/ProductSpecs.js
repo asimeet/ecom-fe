@@ -56,7 +56,7 @@ const ProductSpecs = () => {
             newItem = {
                 stock: 0,
                 itemId: 'dummy-item',
-                size: selectedItem.color,
+                size: selectedItem.size,
                 color
             }
         }
