@@ -5,7 +5,7 @@
      This is the frontend implemented with react for a backend implemented with express microservices!
     <br />
     <br />
-    <a href=""><b>Open Application</b></a>
+    <a href="ec2-18-197-141-197.eu-central-1.compute.amazonaws.com"><b>Open Application</b></a>
     ·
     <a href="https://gitlab.com/asimeetp/ecom-fe/-/issues">Report Bug</a>
     ·
@@ -16,7 +16,7 @@
 
 
 <!-- TABLE OF CONTENTS -->
-<details open="close">
+<details open="open">
   <summary>Table of Contents</summary>
   <ol>
     <li>
