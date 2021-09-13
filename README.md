@@ -145,7 +145,7 @@ To get a local copy up and running follow these simple example steps.
   ```sh
     npm run start-prod
   ```
-3. Install pm2 is not already in the production server
+3. Install pm2 if not already in the production server
   ```sh
     npm install pm2 -g
   ```
